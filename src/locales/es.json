@@ -1,0 +1,153 @@
+{
+  "nav": {
+    "logo": "Andean Flow Technologies",
+    "cta": "Contactar"
+  },
+  "hero": {
+    "eyebrow": "Inteligencia Mineral en el Frente de Carguío",
+    "headline": "Eliminamos la pérdida de cobre fino antes de que abandone la pala.",
+    "subheadline": "SpectraFlow AI convierte cada equipo de carguío en un nodo analítico de clasificación mineralógica en tiempo real, resolviendo el cuello de botella más crítico de la gran minería: la baja resolución del modelo de bloques en zonas de interfase.",
+    "cta_primary": "Solicitar Demo Técnica",
+    "cta_secondary": "Ver Métricas de Desempeño",
+    "badge": "LIBS Stand-off · Edge Computing · ML On-Demand"
+  },
+  "pain": {
+    "eyebrow": "El Diagnóstico",
+    "headline": "El Sistema Dispatch opera a ciegas.",
+    "intro": "En los contactos litológicos, la baja resolución del modelo de bloques a corto plazo genera errores de clasificación sistemáticos. El resultado es irreversible: mineral de alta ley enrutado directamente a botaderos de lastre.",
+    "problem_title": "El Dolor Operacional",
+    "problems": [
+      {
+        "title": "Modelo de bloques degradado",
+        "desc": "La resolución del modelo geológico en zonas de interfase es insuficiente para soportar decisiones de despacho en tiempo real."
+      },
+      {
+        "title": "Dispatch ciego en el frente",
+        "desc": "El sistema de despacho asigna destinos sin clasificación mineralógica in-situ, propagando el error hasta planta."
+      },
+      {
+        "title": "Conciliación Mina-Planta deteriorada",
+        "desc": "La desviación F2 supera rangos operacionales aceptables, comprometiendo la planificación de corto y mediano plazo."
+      },
+      {
+        "title": "Pérdida de cobre fino no cuantificada",
+        "desc": "El mineral mal clasificado que llega a botadero representa una pérdida económica directa y permanente, invisible en los reportes operacionales estándar."
+      }
+    ],
+    "solution_title": "SpectraFlow AI",
+    "solutions": [
+      {
+        "title": "Escáner LIBS Stand-off en pluma",
+        "desc": "Tecnología láser de inducción de plasma de alta resolución montada en la pluma del equipo. Cero contacto, cero abrasión, cero impacto en disponibilidad física."
+      },
+      {
+        "title": "Nodo Edge Computing en cabina",
+        "desc": "Procesamiento embebido de firmas espectrales mediante modelos de Machine Learning propios. Activación bajo demanda al posicionar el balde: sin latencia de red, sin saturación del sistema."
+      },
+      {
+        "title": "Clasificación Óxidos / Sulfuros instantánea",
+        "desc": "Discriminación mineralógica en tiempo real antes de que el material abandone el frente. El Dispatch recibe la señal correcta para cada tronada."
+      },
+      {
+        "title": "Estabilización del KPI F2",
+        "desc": "La conciliación Mina-Planta se estabiliza por debajo del 2%, alineando el modelo de bloques operacional con la realidad del frente de explotación."
+      }
+    ]
+  },
+  "metrics": {
+    "eyebrow": "Métricas de Desempeño Validadas",
+    "headline": "Resultados que impactan el balance operacional.",
+    "items": [
+      {
+        "value": "< 2%",
+        "label": "Desviación F2",
+        "desc": "Estabilización de la conciliación Mina-Planta dentro de rangos de excelencia operacional."
+      },
+      {
+        "value": "+100K",
+        "label": "Toneladas por Día",
+        "desc": "Capacidad de procesamiento y clasificación mineralógica validada en operaciones de gran escala."
+      },
+      {
+        "value": "100%",
+        "label": "Disponibilidad Física",
+        "desc": "Cero detenciones operativas atribuibles al sistema. El equipo de carguío no modifica su ciclo productivo."
+      }
+    ]
+  },
+  "haas": {
+    "eyebrow": "Modelo Comercial",
+    "headline": "No vendemos sensores. Vendemos estabilidad de KPIs.",
+    "subheadline": "Nuestro modelo HaaS (Hardware as a Service) elimina la barrera de entrada CAPEX y alinea nuestra rentabilidad exclusivamente con la performance operacional de su faena.",
+    "cards": [
+      {
+        "tag": "Pilar 01",
+        "title": "Zero CAPEX",
+        "desc": "Todo el hardware OEM industrial de grado minero está incluido en el servicio. Sin inversión inicial, sin depreciación de activos, sin riesgo tecnológico de obsolescencia para la operación.",
+        "highlight": "Hardware incluido en tarifa operativa"
+      },
+      {
+        "tag": "Pilar 02",
+        "title": "Data-as-a-Service",
+        "desc": "Tarifa operativa plana por pala instrumentada, ligada a la clasificación mineralógica en tiempo real y a la disponibilidad garantizada del nodo Edge. Predictibilidad financiera total.",
+        "highlight": "Tarifa plana por pala / mes"
+      },
+      {
+        "tag": "Pilar 03",
+        "title": "Success Fee",
+        "desc": "Bonificación de éxito indexada exclusivamente a la recuperación de cobre fino y al cumplimiento del KPI F2. Si usted no recupera valor, nosotros no cobramos el diferencial.",
+        "highlight": "Alineado al KPI F2 y recuperación Cu"
+      }
+    ]
+  },
+  "team": {
+    "eyebrow": "Core Team",
+    "headline": "Geología, datos y sistemas. En un solo equipo.",
+    "members": [
+      {
+        "name": "Miguel Giuliano",
+        "role": "Founder & Lead Geometallurgist",
+        "bio": "Especialista en geometalurgia aplicada y modelamiento de bloques de corto plazo. Arquitecto del flujo analítico de SpectraFlow AI y responsable de la validación en faena."
+      },
+      {
+        "name": "Cristian Jara",
+        "role": "Lead Data Scientist & Spectral Modeler",
+        "bio": "Desarrollador de los algoritmos propietarios de clasificación espectral en Python. Responsable del entrenamiento, validación y despliegue de modelos ML en el nodo Edge."
+      },
+      {
+        "name": "Giovanni Giuliano",
+        "role": "Lead Systems Integration Engineer",
+        "bio": "Arquitecto de la integración hardware-software en ambiente industrial minero. Responsable del diseño del nodo Edge, la interfaz con el sistema Dispatch y la robustez operacional del sistema."
+      }
+    ]
+  },
+  "ecosystem": {
+    "eyebrow": "Ecosistema Integral",
+    "headline": "Soluciones end-to-end para la cadena de valor minero-metalúrgica.",
+    "subheadline": "SpectraFlow AI es la punta de lanza de un ecosistema de cuatro unidades de negocio diseñado para resolver los cuellos de botella en cada eslabón del proceso.",
+    "units": [
+      {
+        "tag": "Unidad 02",
+        "title": "Mine-to-Mill Reconciliation & Geostatistics",
+        "desc": "Scripts Python propietarios (DHSA) para reconciliación volumétrica, geoestadística aplicada y gestión del error de estimación en el modelo de bloques de largo plazo."
+      },
+      {
+        "tag": "Unidad 03",
+        "title": "Surface Engineering & Robotics — Ablatech",
+        "desc": "Limpieza láser industrial de alta precisión y sistemas de drones para inspección y mantenimiento de activos de superficie. Tecnología de ablación sin abrasivos ni solventes."
+      },
+      {
+        "tag": "Unidad 04",
+        "title": "Chemical & Process Optimization",
+        "desc": "Formulación y suministro de reactivos mineros avanzados para optimización de circuitos de flotación y lixiviación. Enfoque en recuperación metalúrgica y reducción de costos de reagentes."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Inteligencia Mineral. Desde el frente, en tiempo real.",
+    "contact_label": "Contacto Comercial y Técnico",
+    "contact_email": "contact@andeanflow.ai",
+    "rights": "© 2025 Andean Flow Technologies SpA. Todos los derechos reservados.",
+    "location": "Santiago, Chile · andeanflow.ai"
+  }
+}
