@@ -9,8 +9,14 @@
     "headline": "Eliminamos la pérdida de cobre fino antes de que abandone la pala.",
     "subheadline": "SpectraFlow AI convierte cada equipo de carguío en un nodo analítico de clasificación mineralógica en tiempo real, resolviendo el cuello de botella más crítico de la gran minería: la baja resolución del modelo de bloques en zonas de interfase.",
     "cta_primary": "Solicitar Demo Técnica",
-    "cta_secondary": "Ver Métricas de Desempeño",
-    "badge": "LIBS Stand-off · Edge Computing · ML On-Demand"
+    "cta_secondary": "Ver Análisis Financiero",
+    "badge": "LIBS Stand-off · Edge Computing · ML On-Demand",
+    "stats": {
+      "value_at_risk": "USD/año en riesgo",
+      "f2_target": "Desviación F2 objetivo",
+      "tpd_capacity": "Toneladas/día capacidad",
+      "payback": "Meses payback piloto"
+    }
   },
   "pain": {
     "eyebrow": "El Diagnóstico",
@@ -55,6 +61,42 @@
       }
     ]
   },
+  "how": {
+    "eyebrow": "Cómo Funciona",
+    "headline": "La pala como nodo analítico en tiempo real.",
+    "subheadline": "Cuatro pasos que transforman cada balde cargado en una decisión mineralógica informada antes de que el CAEX arranque.",
+    "footnote": "Stand-off: sin contacto con el mineral · Edge ML: sin latencia de nube · Integrado al Dispatch vía API REST/MQTT.",
+    "steps": {
+      "s1": {
+        "tag": "Paso 01",
+        "title": "Pulso Láser Nd:YAG",
+        "desc": "Láser Q-switched >100 mJ disparado en modalidad stand-off a 5–8 m. Cero contacto con el mineral, cero impacto en la disponibilidad de la pala."
+      },
+      "s2": {
+        "tag": "Paso 02",
+        "title": "Plasma & ICCD",
+        "desc": "El pulso crea un micro-plasma en la superficie del mineral. El espectrómetro ICCD gateable captura la firma espectral de Cu, Fe y S en microsegundos."
+      },
+      "s3": {
+        "tag": "Paso 03",
+        "title": "ML Edge · Jetson AGX Orin",
+        "desc": "275 TOPS de potencia IA procesan el espectro con el modelo ML propietario en <500 ms. Sin latencia de nube, sin saturación de red en la mina."
+      },
+      "s4": {
+        "tag": "Paso 04",
+        "title": "Alerta al Dispatch",
+        "desc": "La clasificación mineralógica llega al sistema Wenco Fleet Control vía API antes de que el CAEX inicie su ruta. F2 estabilizado bajo el 2%."
+      }
+    }
+  },
+  "tech": {
+    "eyebrow": "Arquitectura Técnica",
+    "headline": "Hardware de grado industrial minero. Software propietario.",
+    "subheadline": "Cada componente especificado al detalle para soportar las condiciones extremas de operación en pala de gran tonelaje.",
+    "g1": { "label": "Sistema Láser", "title": "Fuente de Excitación LIBS" },
+    "g2": { "label": "Detección Espectral", "title": "Espectrómetro ICCD Gateable" },
+    "g3": { "label": "Edge Computing", "title": "Nodo ML Embebido" }
+  },
   "metrics": {
     "eyebrow": "Métricas de Desempeño Validadas",
     "headline": "Resultados que impactan el balance operacional.",
@@ -70,11 +112,81 @@
         "desc": "Capacidad de procesamiento y clasificación mineralógica validada en operaciones de gran escala."
       },
       {
-        "value": "100%",
+        "value": "> 85%",
         "label": "Disponibilidad Física",
-        "desc": "Cero detenciones operativas atribuibles al sistema. El equipo de carguío no modifica su ciclo productivo."
+        "desc": "Operación stand-off sin contacto con el mineral: el equipo de carguío no modifica su ciclo productivo."
       }
     ]
+  },
+  "financials": {
+    "eyebrow": "Análisis Financiero · Escenario Base",
+    "headline": "El ROI que justifica la decisión esta semana.",
+    "subheadline": "Tres escenarios cuantificados con la misma metodología: 100.000 t/día, 12% en zona de contacto, 0,65% Cu, tasa descuento 8%, precio Cu USD 8.500/t.",
+    "footnote": "* Modelo financiero validado sobre el caso operacional declarado. Cada supuesto se verifica empíricamente durante la Fase 0 del piloto.",
+    "k1": { "label": "VAN 5 años", "sub": "Tasa descuento 8% · Escenario base" },
+    "k2": { "label": "TIR estimada", "sub": "Sobre inversión piloto USD 430K" },
+    "k3": { "label": "Beneficio / Inversión", "sub": "Ratio acumulado 5 años" },
+    "k4": { "label": "Payback piloto", "sub": "Meses desde Fase 1 productiva" },
+    "scenarios": {
+      "title": "Sensibilidad por nivel de reducción de falsos positivos",
+      "fp_reduction": "Reducción FP",
+      "annual": "Ahorro anual",
+      "payback": "Payback",
+      "van": "VAN 5a",
+      "conservative": { "name": "Conservador" },
+      "base":         { "name": "Base", "tag": "KPI Objetivo" },
+      "optimistic":   { "name": "Optimista" }
+    }
+  },
+  "fleet": {
+    "eyebrow": "Economías de Escala",
+    "headline": "Cuánto cuesta instrumentar toda la flota.",
+    "subheadline": "El R&D y el modelo ML se amortizan en el piloto. Cada pala adicional paga solo hardware + instalación + adaptación.",
+    "footnote": "* Escenario base · 50% reducción FP · USD 3M/año por pala · tasa descuento 8% · descuento volumen ~10% en componentes chinos desde módulo 3+.",
+    "cols": {
+      "config": "Configuración",
+      "module": "Módulo adicional",
+      "capex": "CAPEX acumulado",
+      "per_shovel": "Costo prom./pala",
+      "annual": "Ahorro anual",
+      "payback": "Payback"
+    },
+    "rows": {
+      "r1": "1 pala — Piloto",
+      "r2": "3 palas",
+      "r3": "5 palas ★ Punto óptimo",
+      "r4": "8 palas — Flota completa"
+    }
+  },
+  "roadmap": {
+    "eyebrow": "Hoja de Ruta del Piloto",
+    "headline": "12 meses, dos hitos de decisión, riesgo acotado.",
+    "subheadline": "Estructura stage-gate diseñada para minimizar exposición: si Gate 1 falla, el costo del aprendizaje es USD 150K. Si pasa, el ROI del piloto completo es < 2 meses.",
+    "budget": "Inversión",
+    "p0": {
+      "tag": "Meses 1–4",
+      "title": "Fase 0 — Validación Lab",
+      "desc": "Adquisición de equipos, campaña de muestras de testigos, integración bench y entrenamiento del modelo ML v1 en laboratorio Antofagasta."
+    },
+    "g1": {
+      "tag": "Mes 4",
+      "title": "Gate 1 — Go/No-Go",
+      "desc": "Criterios técnicos: precisión >80% en lab, latencia <500 ms demostrada, ICCD estable >48 h continuas."
+    },
+    "p1": {
+      "tag": "Meses 5–12",
+      "title": "Fase 1 — Piloto en Pala",
+      "desc": "Ruggedización completa, instalación mecánica en pluma, integración con Wenco Dispatch, operación piloto de 6 meses con medición de KPIs reales."
+    },
+    "g2": {
+      "tag": "Mes 12",
+      "title": "Gate 2 — Escala Flota",
+      "desc": "Criterios de negocio: reducción FP >40% demostrada, F2 <2% sostenido por 3 meses, disponibilidad >85% en turno operativo."
+    },
+    "totals": {
+      "label": "Inversión total piloto",
+      "value": "USD 430.000 (Fase 0: USD 150K + Fase 1: USD 280K) · El R&D y el modelo ML se amortizan aquí. Módulos adicionales para escalar a la flota: USD 175K–210K por pala."
+    }
   },
   "haas": {
     "eyebrow": "Modelo Comercial",
@@ -100,6 +212,19 @@
         "highlight": "Alineado al KPI F2 y recuperación Cu"
       }
     ]
+  },
+  "traffic": {
+    "eyebrow": "Segundo Producto — En Desarrollo",
+    "headline": "Control Inteligente de Tráfico Minero.",
+    "subheadline": "Sistema de gestión de tráfico en tiempo real para flota completa: predicción de congestión, ruteo óptimo y control de intersecciones con lógica de prioridad de producción.",
+    "f1": { "title": "Visibilidad de tráfico en tiempo real", "desc": "GPS RTK de alta precisión (<2 cm) en todos los equipos + sensores fijos (LiDAR + cámara IA) en intersecciones y rampas críticas. Del estado reactivo al proactivo." },
+    "f2": { "title": "Predicción de congestión con ML", "desc": "Gemelo digital de la red de caminos con modelo ML que anticipa cuellos de botella antes de que ocurran, habilitando ruteo dinámico por ciclo productivo." },
+    "f3": { "title": "Semáforos inteligentes en intersecciones", "desc": "Señalización dinámica y control de derecho de paso integrado al motor de prioridades de producción. Los equipos del ciclo crítico tienen prioridad verificable." },
+    "f4": { "title": "Integración con FMS existente", "desc": "Se integra al Dispatch actual (Wenco, Modular Mining, Cat MineStar) vía API. No reemplaza la infraestructura: la potencia con inteligencia adicional." },
+    "k1": "Tiempos de conducción",
+    "k2": "Congestión en puntos críticos",
+    "k3": "Visibilidad de flota",
+    "k4": "Latencia decisión prioridad"
   },
   "team": {
     "eyebrow": "Core Team",
@@ -143,6 +268,13 @@
         "desc": "Formulación y suministro de reactivos mineros avanzados para optimización de circuitos de flotación y lixiviación. Enfoque en recuperación metalúrgica y reducción de costos de reagentes."
       }
     ]
+  },
+  "cta": {
+    "aster_badge": "Preparado para revisión · Equipo Aster · BHP",
+    "headline": "¿Listos para eliminar el punto ciego del Dispatch?",
+    "subheadline": "Conversemos sobre cómo SpectraFlow AI puede estabilizar el F2 de su faena e iniciar el piloto antes de Q4 2026.",
+    "primary": "Solicitar Demo Técnica",
+    "secondary": "Descargar Business Case"
   },
   "footer": {
     "tagline": "Inteligencia Mineral. Desde el frente, en tiempo real.",
