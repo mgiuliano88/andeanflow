@@ -1,17 +1,49 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import {
-  ArrowRight, Zap, Layers, TrendingUp, Shield, ChevronRight,
-  Mail, MapPin, Cpu, FlaskConical, Radar, Drill,
+  ArrowRight, Layers, TrendingUp, Shield, ChevronRight,
+  Mail, MapPin, FlaskConical, Radar, Drill,
   AlertTriangle, CheckCircle2, Activity
 } from "lucide-react";
+
+// ─── Brand Logo ──────────────────────────────────────────────────────────────
+// Place the logo files in /public/brand/ :
+//   /public/brand/logo-andeanflow.svg       (full lockup: emblem + wordmark)
+//   /public/brand/logo-andeanflow-icon.svg  (emblem only, for compact/navbar use)
+// Both are transparent and work on the dark slate background.
+
+function LogoFull({ className = "" }: { className?: string }) {
+  return (
+    <Image
+      src="/brand/logo-andeanflow.svg"
+      alt="Andean Flow Technologies"
+      width={1408}
+      height={768}
+      priority
+      className={className}
+    />
+  );
+}
+
+function LogoIcon({ className = "" }: { className?: string }) {
+  return (
+    <Image
+      src="/brand/logo-andeanflow-icon.svg"
+      alt="Andean Flow Technologies"
+      width={365}
+      height={264}
+      className={className}
+    />
+  );
+}
 
 // ─── i18n stub ──────────────────────────────────────────────────────────────
 // In production, replace with next-intl or next-i18next.
 // Keys map 1-to-1 to es.json / en.json dictionaries.
-import es from "../locales/es.json";
-import en from "../locales/en.json";
+import es from "@/locales/es.json";
+import en from "@/locales/en.json";
 
 type Locale = "es" | "en";
 const dicts: Record<Locale, typeof es> = { es, en };
@@ -66,17 +98,16 @@ function Navbar({ t, locale, setLocale }: {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/60">
       <div className="max-w-7xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2.5">
-          <div className="w-7 h-7 rounded bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center">
-            <Zap size={14} className="text-cyan-400" />
-          </div>
-          <span className="text-white font-semibold text-sm tracking-wide">
-            {t("nav.logo")}
-          </span>
-        </div>
+        <a href="#" className="flex items-center" aria-label={t("nav.logo")}>
+          <LogoFull className="h-9 w-auto" />
+        </a>
 
         {/* Right side */}
         <div className="flex items-center gap-4">
+          {/* Aster / BHP review badge */}
+          <span className="hidden md:inline-flex items-center gap-1.5 text-[10px] font-semibold tracking-[0.15em] uppercase text-amber-500/90 border border-amber-600/40 bg-amber-500/10 px-2.5 py-1 rounded">
+            ⬡ {t("nav.review_badge")}
+          </span>
           {/* Locale toggle */}
           <button
             onClick={() => setLocale(locale === "es" ? "en" : "es")}
@@ -416,11 +447,8 @@ function Footer({ t }: { t: (k: string) => string }) {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2.5 mb-3">
-              <div className="w-6 h-6 rounded bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center">
-                <Zap size={12} className="text-cyan-400" />
-              </div>
-              <span className="text-white font-semibold text-sm">{t("nav.logo")}</span>
+            <div className="mb-3">
+              <LogoFull className="h-8 w-auto" />
             </div>
             <p className="text-slate-500 text-xs italic">{t("footer.tagline")}</p>
             <div className="flex items-center gap-1.5 mt-2">
