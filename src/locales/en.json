@@ -1,286 +1,136 @@
 {
   "nav": {
     "logo": "Andean Flow Technologies",
-    "cta": "Contact Us",
-    "review_badge": "Ready for Aster Team · BHP"
+    "cta": "Book a Meeting",
+    "review_badge": "Active Submission · Aster · BHP",
+    "links": { "problem": "Problem", "approach": "Approach", "science": "Science", "roadmap": "Roadmap", "team": "Team" }
   },
   "hero": {
-    "eyebrow": "Mineral Intelligence at the Loading Face",
-    "headline": "We eliminate fine copper loss before it ever leaves the shovel.",
-    "subheadline": "SpectraFlow AI transforms every loading unit into a real-time mineralogical classification node, resolving the most critical bottleneck in large-scale mining: the low resolution of short-term block models at lithological contact zones.",
-    "cta_primary": "Request Technical Demo",
-    "cta_secondary": "View Financial Analysis",
-    "badge": "Stand-off LIBS · Edge Computing · On-Demand ML",
-    "stats": {
-      "value_at_risk": "USD/year at risk",
-      "f2_target": "F2 deviation target",
-      "tpd_capacity": "Tons/day capacity",
-      "payback": "Months pilot payback"
-    }
+    "eyebrow": "Mineralogical Intelligence at the Loading Face",
+    "headline": "Chemistry defines where the ore goes. We read it at the face.",
+    "subheadline": "SpectraFlow AI classifies copper mineral species — oxide, sulfide, mixed — directly at the loading point using LIBS spectroscopy and Machine Learning. Chemical speciation, not color, defines whether material goes to leaching, flotation or the waste dump.",
+    "cta_primary": "Book a Technical Meeting",
+    "cta_secondary": "See the Approach",
+    "badge": "LIBS · Edge ML · Copper Speciation",
+    "trl": "Maturity status: TRL 4 → laboratory validation in progress",
+    "stats_labels": {
+      "value": "USD/year at risk from misclassification*",
+      "accuracy": "LIBS+ML accuracy in laboratory**",
+      "decision": "Decision by elemental chemistry",
+      "edge": "Local processing, no cloud"
+    },
+    "stats_values": { "value": "USD 2–5M", "accuracy": "82–94%", "decision": "Elemental", "edge": "Edge ML" },
+    "disclaimer": "* Range to be validated with F2 reconciliation data from each deposit. ** Published LIBS+ML accuracy on minerals under laboratory conditions (bibliographic reference). Field accuracy is our validation target, not a guaranteed figure."
   },
-  "pain": {
-    "eyebrow": "The Diagnosis",
-    "headline": "The Dispatch System operates blind.",
-    "intro": "At lithological contacts, the low resolution of short-term block models generates systematic classification errors. The outcome is irreversible: high-grade ore routed directly to waste dumps.",
-    "problem_title": "The Operational Pain",
-    "problems": [
-      {
-        "title": "Degraded block model resolution",
-        "desc": "Geological model resolution at interface zones is insufficient to support real-time dispatch decisions."
-      },
-      {
-        "title": "Blind dispatch at the face",
-        "desc": "The dispatch system assigns destinations without in-situ mineralogical classification, propagating error all the way to the plant."
-      },
-      {
-        "title": "Deteriorated Mine-Plant reconciliation",
-        "desc": "F2 deviation exceeds acceptable operational ranges, compromising both short- and medium-term planning."
-      },
-      {
-        "title": "Unquantified fine copper loss",
-        "desc": "Misclassified ore reaching the waste dump represents a direct and permanent economic loss, invisible in standard operational reports."
-      }
+  "problem": {
+    "eyebrow": "The Problem",
+    "headline": "At the contact zone, Dispatch decides blind.",
+    "intro": "The short-term block model loses resolution exactly where it matters most: lithological contacts between oxide, sulfide and waste. The operator classifies visually, and every error sends high-grade ore to the dump — irreversibly.",
+    "cards": [
+      { "stat": "cm", "title": "Resolution that falls short", "desc": "Blocks of 5–10 m average out lithologies that change over centimeters. At the contact, that resolution is insufficient to decide the correct destination." },
+      { "stat": "±5%", "title": "F2 out of range", "desc": "Mine-Plant reconciliation deviation exceeds operational excellence ranges, compromising short- and medium-term planning." },
+      { "stat": "irrev.", "title": "Permanent loss", "desc": "Misclassified fine copper that reaches the dump is not recovered. It is a direct, continuous loss, invisible in standard operational reports." }
     ],
-    "solution_title": "SpectraFlow AI",
-    "solutions": [
-      {
-        "title": "Stand-off LIBS scanner on the boom",
-        "desc": "High-resolution laser-induced plasma spectroscopy mounted on the equipment boom. Zero contact, zero abrasion, zero impact on physical availability."
-      },
-      {
-        "title": "Edge Computing node in the cabin",
-        "desc": "Embedded processing of spectral signatures using proprietary Machine Learning models. On-demand activation when positioning the bucket: no network latency, no system saturation."
-      },
-      {
-        "title": "Instant Oxide / Sulfide classification",
-        "desc": "Real-time mineralogical discrimination before the material leaves the face. Dispatch receives the correct signal for every blast."
-      },
-      {
-        "title": "F2 KPI stabilization",
-        "desc": "Mine-Plant reconciliation stabilizes below 2%, aligning the operational block model with the reality of the mining face."
-      }
-    ]
+    "honest_note": "How much this problem costs depends on the deposit. We don't sell a generic figure: the first deliverable of our work is to quantify it with the real F2 reconciliation data from your operation."
   },
-  "how": {
-    "eyebrow": "How It Works",
-    "headline": "The shovel as a real-time analytical node.",
-    "subheadline": "Four steps that turn every loaded bucket into an informed mineralogical decision before the haul truck departs.",
-    "footnote": "Stand-off: no contact with the ore · Edge ML: no cloud latency · Integrated with Dispatch via REST/MQTT API.",
+  "approach": {
+    "eyebrow": "The Approach",
+    "headline": "We measure elemental chemistry. We don't infer color.",
+    "intro": "The technical difference that defines our edge: vision and hyperspectral technologies infer mineralogy from reflectance. LIBS measures the real elemental composition of the material — the same chemistry that determines its metallurgical route.",
     "steps": {
-      "s1": {
-        "tag": "Step 01",
-        "title": "Nd:YAG Laser Pulse",
-        "desc": "Q-switched laser >100 mJ fired in stand-off mode at 5–8 m. Zero contact with the ore, zero impact on shovel availability."
-      },
-      "s2": {
-        "tag": "Step 02",
-        "title": "Plasma & ICCD",
-        "desc": "The pulse creates a micro-plasma on the ore surface. The gated ICCD spectrometer captures the Cu, Fe and S spectral signature in microseconds."
-      },
-      "s3": {
-        "tag": "Step 03",
-        "title": "ML Edge · Jetson AGX Orin",
-        "desc": "275 TOPS of AI power process the spectrum with the proprietary ML model in <500 ms. No cloud latency, no mine network saturation."
-      },
-      "s4": {
-        "tag": "Step 04",
-        "title": "Dispatch Alert",
-        "desc": "The mineralogical classification reaches Wenco Fleet Control via API before the haul truck starts its route. F2 stabilized below 2%."
-      }
+      "s1": { "tag": "01 · Excitation", "title": "Laser pulse on the material", "desc": "A high-energy laser pulse vaporizes a micro-portion of the ore and generates a plasma. LIBS is a standard, mature technique for elemental analysis." },
+      "s2": { "tag": "02 · Spectral capture", "title": "ICCD spectrometer reads the signature", "desc": "The gated detector captures emission lines of Cu, Fe, S and associated elements in microseconds. Each element has an unmistakable spectral signature." },
+      "s3": { "tag": "03 · ML classification", "title": "Proprietary model discriminates species", "desc": "Our Machine Learning model, trained on the deposit's spectral library, classifies oxide / sulfide / mixed from the real elemental chemistry." },
+      "s4": { "tag": "04 · Decision", "title": "Classification to the dispatch flow", "desc": "The result is delivered to the management system to inform the material routing decision: leaching, flotation or waste." }
+    },
+    "diff_title": "Why LIBS and not the alternatives",
+    "diff_intro": "We don't compete by denying others. We position ourselves where LIBS is technically superior for the specific problem of copper speciation.",
+    "comparison": {
+      "header_tech": "Technology", "header_measures": "What it measures", "header_limit": "Limitation for Cu speciation",
+      "rows": [
+        { "tech": "Hyperspectral (vision)", "measures": "Reflectance / color", "limit": "Infers mineralogy; does not provide quantitative elemental composition.", "highlight": false },
+        { "tech": "Portable XRF", "measures": "X-ray fluorescence", "limit": "Does not detect light elements (Z<16); poorly discriminates Cu species.", "highlight": false },
+        { "tech": "SpectraFlow · LIBS", "measures": "Direct elemental emission", "limit": "Requires a spectral library per deposit (our barrier to entry).", "highlight": true }
+      ]
     }
   },
-  "tech": {
-    "eyebrow": "Technical Architecture",
-    "headline": "Industrial-grade mining hardware. Proprietary software.",
-    "subheadline": "Each component specified in detail to support the extreme operating conditions on a large-tonnage shovel.",
-    "g1": { "label": "Laser System", "title": "LIBS Excitation Source" },
-    "g2": { "label": "Spectral Detection", "title": "Gated ICCD Spectrometer" },
-    "g3": { "label": "Edge Computing", "title": "Embedded ML Node" }
+  "science": {
+    "eyebrow": "Scientific Rigor",
+    "headline": "Technical honesty as competitive advantage.",
+    "intro": "A serious evaluator trusts those who declare their real maturity status. This is what is proven, what we are validating, and what is our declared engineering challenge.",
+    "columns": [
+      { "status": "Proven", "tag": "TRL 8 · Literature + Lab", "title": "LIBS + ML classifies minerals", "items": ["Mineral classification by LIBS+ML reports 82–94% accuracy under laboratory conditions (peer-reviewed literature).", "Elemental speciation of Cu, Fe and S by plasma spectroscopy is established physics.", "Initiatives like CRC ORE + NRC Canada validate LIBS for mineral characterization in mining."] },
+      { "status": "Validating", "tag": "TRL 4 → 5 · In progress", "title": "Accuracy on the real deposit", "items": ["Building the spectral library specific to the target deposit (matrix effect).", "ML model v0 trained on real contact-zone samples.", "Documented benchmark LIBS vs. hyperspectral vs. XRF on the same samples."] },
+      { "status": "Declared challenge", "tag": "TRL 3 · Later R&D", "title": "Stand-off operation on the shovel", "items": ["Measurement at 5–8 m on a moving boom is our underlying engineering challenge, not a solved premise.", "The MVP validates first in a confined proximity configuration (safe and proven).", "Stand-off is addressed as a separate optical problem, after validating the chemistry."] }
+    ]
   },
   "metrics": {
-    "eyebrow": "Validated Performance Metrics",
-    "headline": "Results that impact the operational balance.",
+    "eyebrow": "What We Aim to Prove",
+    "headline": "Target metrics, not promises.",
+    "intro": "These are the pilot's validation goals. We present them as objectives to be demonstrated with evidence, not as guaranteed results.",
     "items": [
-      {
-        "value": "< 2%",
-        "label": "F2 Deviation",
-        "desc": "Stabilization of Mine-Plant reconciliation within operational excellence ranges."
-      },
-      {
-        "value": "+100K",
-        "label": "Tons per Day",
-        "desc": "Mineralogical processing and classification capacity validated in large-scale operations."
-      },
-      {
-        "value": "> 85%",
-        "label": "Physical Availability",
-        "desc": "Stand-off operation with no ore contact: the loading equipment does not modify its productive cycle."
-      }
+      { "value": "≥ 85%", "label": "Target lab accuracy", "desc": "Oxide/sulfide classification on real deposit samples, validated against reference assays." },
+      { "value": "< 2%", "label": "Target F2 deviation", "desc": "Stabilization of Mine-Plant reconciliation as the system's operational impact goal." },
+      { "value": "Benchmark", "label": "vs. existing technologies", "desc": "Documented technical comparison demonstrating LIBS superiority for copper speciation." }
     ]
-  },
-  "financials": {
-    "eyebrow": "Financial Analysis · Base Scenario",
-    "headline": "The ROI that justifies the decision this week.",
-    "subheadline": "Three scenarios quantified with the same methodology: 100,000 t/day, 12% at contact zone, 0.65% Cu, 8% discount rate, Cu price USD 8,500/t.",
-    "footnote": "* Financial model validated against the declared operational case. Each assumption is empirically verified during Phase 0 of the pilot.",
-    "k1": { "label": "NPV 5 years", "sub": "8% discount rate · Base scenario" },
-    "k2": { "label": "Estimated IRR", "sub": "Over USD 430K pilot investment" },
-    "k3": { "label": "Benefit / Investment", "sub": "Cumulative 5-year ratio" },
-    "k4": { "label": "Pilot Payback", "sub": "Months from Phase 1 productive" },
-    "scenarios": {
-      "title": "Sensitivity by false-positive reduction level",
-      "fp_reduction": "FP Reduction",
-      "annual": "Annual savings",
-      "payback": "Payback",
-      "van": "NPV 5y",
-      "conservative": { "name": "Conservative" },
-      "base":         { "name": "Base", "tag": "Target KPI" },
-      "optimistic":   { "name": "Optimistic" }
-    }
-  },
-  "fleet": {
-    "eyebrow": "Economies of Scale",
-    "headline": "What it costs to instrument the entire fleet.",
-    "subheadline": "R&D and the ML model are amortized in the pilot. Each additional shovel pays only for hardware + installation + adaptation.",
-    "footnote": "* Base scenario · 50% FP reduction · USD 3M/year per shovel · 8% discount rate · ~10% volume discount on Chinese components from module 3+.",
-    "cols": {
-      "config": "Configuration",
-      "module": "Additional module",
-      "capex": "Cumulative CAPEX",
-      "per_shovel": "Avg cost/shovel",
-      "annual": "Annual savings",
-      "payback": "Payback"
-    },
-    "rows": {
-      "r1": "1 shovel — Pilot",
-      "r2": "3 shovels",
-      "r3": "5 shovels ★ Sweet spot",
-      "r4": "8 shovels — Full fleet"
-    }
   },
   "roadmap": {
-    "eyebrow": "Pilot Roadmap",
-    "headline": "12 months, two decision gates, bounded risk.",
-    "subheadline": "Stage-gate structure designed to minimize exposure: if Gate 1 fails, the learning cost is USD 150K. If it passes, the full pilot ROI is < 2 months.",
+    "eyebrow": "Roadmap · Re-sequenced",
+    "headline": "Validate cheap before investing big.",
+    "subheadline": "A disciplined stage-gate structure. Each phase has an evidence-based decision milestone. If a phase fails its criterion, the project stops or pivots before committing the next block of capital.",
     "budget": "Investment",
-    "p0": {
-      "tag": "Months 1–4",
-      "title": "Phase 0 — Lab Validation",
-      "desc": "Equipment procurement, drill core sampling campaign, bench integration and ML model v1 training at the Antofagasta lab."
-    },
-    "g1": {
-      "tag": "Month 4",
-      "title": "Gate 1 — Go/No-Go",
-      "desc": "Technical criteria: accuracy >80% in lab, latency <500 ms demonstrated, ICCD stable >48 h continuous."
-    },
-    "p1": {
-      "tag": "Months 5–12",
-      "title": "Phase 1 — Pilot on Shovel",
-      "desc": "Full ruggedization, mechanical installation on boom, integration with Wenco Dispatch, 6-month operational pilot with real KPI measurement."
-    },
-    "g2": {
-      "tag": "Month 12",
-      "title": "Gate 2 — Fleet Scale",
-      "desc": "Business criteria: >40% FP reduction demonstrated, F2 <2% sustained for 3 months, >85% availability during operational shift."
-    },
-    "totals": {
-      "label": "Total pilot investment",
-      "value": "USD 430,000 (Phase 0: USD 150K + Phase 1: USD 280K) · R&D and the ML model are amortized here. Additional modules for fleet scale-up: USD 175K–210K per shovel."
-    }
+    "phases": [
+      { "id": "F1", "tag": "Month 1 · USD 3K", "title": "Customer Discovery", "desc": "15+ interviews with Mine Superintendents and Geologists at target operations. Identification of internal sponsors and quantification of the problem's priority.", "gate": "Gate: ≥3 sponsors interested in a POC" },
+      { "id": "F2", "tag": "Month 2 · USD 10K", "title": "Problem Quantification", "desc": "Historical F2 reconciliation analysis + real face samples. Business case with data from the specific deposit, not generic estimates.", "gate": "Gate: problem validated ≥ USD 2M/year" },
+      { "id": "F3", "tag": "Month 3–4 · USD 40K", "title": "Laboratory Validation", "desc": "Proximity LIBS at a university lab on deposit samples + ML model v0 + benchmark against hyperspectral and XRF + academic-center endorsement.", "gate": "Gate: accuracy ≥ 85% in laboratory" },
+      { "id": "F4", "tag": "Month 5 · USD 15K", "title": "Letter of Intent + Safety", "desc": "Preliminary system HAZOP, POC proposal with a CAPEX-to-client model, and letter-of-intent negotiation with the primary sponsor.", "gate": "Gate: 1 signed LOI for a paid POC" }
+    ],
+    "totals": { "label": "Validation MVP investment", "value": "USD 68,000 · 5 months. Designed to produce defensible technical evidence, a client with a signed letter of intent and a competitive benchmark — before building the full system." }
   },
-  "haas": {
+  "model": {
     "eyebrow": "Commercial Model",
-    "headline": "We don't sell sensors. We sell KPI stability.",
-    "subheadline": "Our HaaS (Hardware as a Service) model removes the CAPEX entry barrier and aligns our profitability exclusively with the operational performance of your site.",
+    "headline": "Land & Expand: from diagnosis to system.",
+    "subheadline": "We don't ask the operation for a blind capital bet. We enter with a low-risk service that delivers immediate value and opens the door to the full system.",
     "cards": [
-      {
-        "tag": "Pillar 01",
-        "title": "Zero CAPEX",
-        "desc": "All industrial mining-grade OEM hardware is included in the service. No upfront investment, no asset depreciation, no technology obsolescence risk for the operation.",
-        "highlight": "Hardware included in operating fee"
-      },
-      {
-        "tag": "Pillar 02",
-        "title": "Data-as-a-Service",
-        "desc": "Flat operating fee per instrumented shovel, tied to real-time mineralogical classification and guaranteed Edge node availability. Full financial predictability.",
-        "highlight": "Flat fee per shovel / month"
-      },
-      {
-        "tag": "Pillar 03",
-        "title": "Success Fee",
-        "desc": "Success bonus indexed exclusively to fine copper recovery and F2 KPI compliance. If you do not recover value, we do not charge the differential.",
-        "highlight": "Aligned with F2 KPI and Cu recovery"
-      }
+      { "tag": "Entry · Land", "title": "Geometallurgical Diagnosis", "desc": "Quantification of misclassification loss with real F2 data. A low-cost, high-value consulting service that builds the relationship and the specific business case.", "highlight": "Low risk · Immediate value" },
+      { "tag": "Validation · Prove", "title": "POC with CAPEX-to-client", "desc": "Proof of concept in a proximity configuration. The client acquires the hardware (their balance sheet supports it); Andean Flow provides the software, model and integration.", "highlight": "Margin in software, not hardware" },
+      { "tag": "Scale · Expand", "title": "License + Recurring Service", "desc": "Classification software license + continuous model recalibration. The recurring value is in geometallurgical knowledge and data, not in reselling equipment.", "highlight": "Recurring · Scalable" }
     ]
-  },
-  "traffic": {
-    "eyebrow": "Second Product — In Development",
-    "headline": "Intelligent Mining Traffic Control.",
-    "subheadline": "Real-time traffic management system for the full fleet: congestion prediction, optimal routing and intersection control with production-priority logic.",
-    "f1": { "title": "Real-time traffic visibility", "desc": "High-precision RTK GPS (<2 cm) on all equipment + fixed sensors (LiDAR + AI camera) at critical intersections and ramps. From reactive to proactive." },
-    "f2": { "title": "ML-powered congestion prediction", "desc": "Digital twin of the haul road network with an ML model that anticipates bottlenecks before they occur, enabling dynamic routing by productive cycle." },
-    "f3": { "title": "Smart traffic lights at intersections", "desc": "Dynamic signaling and right-of-way control integrated with the production priorities engine. Equipment on the critical cycle gets verifiable priority." },
-    "f4": { "title": "Integration with existing FMS", "desc": "Integrates with the current Dispatch (Wenco, Modular Mining, Cat MineStar) via API. Does not replace infrastructure: it empowers it with additional intelligence." },
-    "k1": "Driving times",
-    "k2": "Congestion at critical points",
-    "k3": "Fleet visibility",
-    "k4": "Priority decision latency"
   },
   "team": {
-    "eyebrow": "Core Team",
-    "headline": "Geology, data and systems. One team.",
+    "eyebrow": "Founding Team",
+    "headline": "Geometallurgy, data and systems. The right combination.",
+    "intro": "The project's real advantage is not the hardware — it's the team able to read the chemistry, model it and integrate it into the operation.",
     "members": [
-      {
-        "name": "Miguel Giuliano",
-        "role": "Founder & Lead Geometallurgist",
-        "bio": "Specialist in applied geometallurgy and short-term block modeling. Architect of the SpectraFlow AI analytical workflow and responsible for field validation."
-      },
-      {
-        "name": "Cristian Jara",
-        "role": "Lead Data Scientist & Spectral Modeler",
-        "bio": "Developer of the proprietary spectral classification algorithms in Python. Responsible for training, validation and deployment of ML models on the Edge node."
-      },
-      {
-        "name": "Giovanni Giuliano",
-        "role": "Lead Systems Integration Engineer",
-        "bio": "Architect of hardware-software integration in industrial mining environments. Responsible for the Edge node design, Dispatch system interface, and operational system robustness."
-      }
-    ]
+      { "name": "Miguel Giuliano", "role": "Founder & Lead Geometallurgist", "bio": "Applied geometallurgy and short-term block modeling. Defines what to classify, designs the spectral library and validates that classification is geologically correct." },
+      { "name": "Cristian Jara", "role": "Lead Data Scientist & Spectral Modeler", "bio": "Spectral classification algorithms in Python. Responsible for training, uncertainty quantification and model deployment on the Edge node." },
+      { "name": "Giovanni Giuliano", "role": "Lead Systems Integration Engineer", "bio": "Hardware-software integration in industrial mining environments. Responsible for the Edge node, the dispatch system interface and operational robustness." }
+    ],
+    "advisors_note": "In the process of onboarding: a mathematician specialized in chemometrics, a Wenco Fleet Control systems expert, and an industrial engineer with routing and ML experience."
   },
-  "ecosystem": {
-    "eyebrow": "Integral Ecosystem",
-    "headline": "End-to-end solutions for the mining-metallurgical value chain.",
-    "subheadline": "SpectraFlow AI is the spearhead of an ecosystem of four business units designed to solve bottlenecks at every step of the process.",
+  "vision": {
+    "eyebrow": "Long-term Vision",
+    "headline": "SpectraFlow is the first step.",
+    "subheadline": "An ecosystem of solutions for the mining-metallurgical value chain, built on the same foundation: chemistry, data and geometallurgy.",
     "units": [
-      {
-        "tag": "Unit 02",
-        "title": "Mine-to-Mill Reconciliation & Geostatistics",
-        "desc": "Proprietary Python scripts (DHSA) for volumetric reconciliation, applied geostatistics and estimation error management in the long-term block model."
-      },
-      {
-        "tag": "Unit 03",
-        "title": "Surface Engineering & Robotics — Ablatech",
-        "desc": "High-precision industrial laser cleaning and drone systems for inspection and maintenance of surface assets. Ablation technology without abrasives or solvents."
-      },
-      {
-        "tag": "Unit 04",
-        "title": "Chemical & Process Optimization",
-        "desc": "Formulation and supply of advanced mining reagents for the optimization of flotation and leaching circuits. Focus on metallurgical recovery and reagent cost reduction."
-      }
+      { "tag": "Active", "title": "SpectraFlow AI", "desc": "Mineralogical classification at the loading face by LIBS + ML. The product we are validating today." },
+      { "tag": "In design", "title": "Mine-Plant Reconciliation", "desc": "Geostatistics and volumetric reconciliation for estimation-error management in the block model." },
+      { "tag": "Exploratory", "title": "Intelligent Traffic Control", "desc": "Real-time mining traffic management: congestion prediction and optimal routing. Second product under evaluation." }
     ]
   },
   "cta": {
-    "aster_badge": "Ready for review · Aster Team · BHP",
-    "headline": "Ready to eliminate the Dispatch blind spot?",
-    "subheadline": "Let's talk about how SpectraFlow AI can stabilize your site's F2 and start the pilot before Q4 2026.",
-    "primary": "Request Technical Demo",
-    "secondary": "Download Business Case"
+    "aster_badge": "Project submitted · Aster · BHP",
+    "headline": "Let's talk about the first step.",
+    "subheadline": "We are looking for an operation willing to quantify the problem with its own data. That diagnosis is the low-risk start of a collaboration that can transform your site's reconciliation.",
+    "primary": "Book a Technical Meeting",
+    "secondary": "Request Project Dossier"
   },
   "footer": {
-    "tagline": "Mineral Intelligence. From the face, in real time.",
+    "tagline": "Mineralogical intelligence. From the face, with scientific rigor.",
     "contact_label": "Commercial and Technical Contact",
-    "contact_email": "contact@andeanflow.ai",
-    "rights": "© 2025 Andean Flow Technologies SpA. All rights reserved.",
-    "location": "Santiago, Chile · andeanflow.ai"
+    "contact_email": "miguel@andeanflow.ai",
+    "rights": "© 2026 Andean Flow Technologies SpA. All rights reserved.",
+    "location": "Santiago, Chile · andeanflow.ai",
+    "disclaimer": "The accuracy and return figures presented are validation targets based on scientific literature and reference cases, not guaranteed results. Empirical validation is the purpose of the piloting program."
   }
 }

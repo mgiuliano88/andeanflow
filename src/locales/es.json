@@ -1,286 +1,136 @@
 {
   "nav": {
     "logo": "Andean Flow Technologies",
-    "cta": "Contactar",
-    "review_badge": "Preparado para Equipo Aster · BHP"
+    "cta": "Agendar Reunión",
+    "review_badge": "Postulación Activa · Aster · BHP",
+    "links": { "problem": "Problema", "approach": "Enfoque", "science": "Ciencia", "roadmap": "Roadmap", "team": "Equipo" }
   },
   "hero": {
-    "eyebrow": "Inteligencia Mineral en el Frente de Carguío",
-    "headline": "Eliminamos la pérdida de cobre fino antes de que abandone la pala.",
-    "subheadline": "SpectraFlow AI convierte cada equipo de carguío en un nodo analítico de clasificación mineralógica en tiempo real, resolviendo el cuello de botella más crítico de la gran minería: la baja resolución del modelo de bloques en zonas de interfase.",
-    "cta_primary": "Solicitar Demo Técnica",
-    "cta_secondary": "Ver Análisis Financiero",
-    "badge": "LIBS Stand-off · Edge Computing · ML On-Demand",
-    "stats": {
-      "value_at_risk": "USD/año en riesgo",
-      "f2_target": "Desviación F2 objetivo",
-      "tpd_capacity": "Toneladas/día capacidad",
-      "payback": "Meses payback piloto"
-    }
+    "eyebrow": "Inteligencia Mineralógica en el Frente de Carguío",
+    "headline": "La química define el destino del mineral. Nosotros la leemos en el frente.",
+    "subheadline": "SpectraFlow AI clasifica especies mineralógicas de cobre — óxido, sulfuro, mixto — directamente en el punto de carguío mediante espectroscopía LIBS y Machine Learning. La especiación química, no el color, define si el material va a lixiviación, flotación o botadero.",
+    "cta_primary": "Agendar Reunión Técnica",
+    "cta_secondary": "Ver el Enfoque",
+    "badge": "LIBS · Edge ML · Especiación de Cobre",
+    "trl": "Estado de madurez: TRL 4 → validación en laboratorio en curso",
+    "stats_labels": {
+      "value": "USD/año en riesgo por misclasificación*",
+      "accuracy": "Precisión LIBS+ML en laboratorio**",
+      "decision": "Decisión por química elemental",
+      "edge": "Procesamiento local, sin nube"
+    },
+    "stats_values": { "value": "USD 2–5M", "accuracy": "82–94%", "decision": "Elemental", "edge": "Edge ML" },
+    "disclaimer": "* Rango a validar con datos de conciliación F2 de cada yacimiento. ** Precisión publicada de LIBS+ML sobre minerales en condiciones de laboratorio (referencia bibliográfica). La precisión en campo es nuestro objetivo de validación, no una cifra garantizada."
   },
-  "pain": {
-    "eyebrow": "El Diagnóstico",
-    "headline": "El Sistema Dispatch opera a ciegas.",
-    "intro": "En los contactos litológicos, la baja resolución del modelo de bloques a corto plazo genera errores de clasificación sistemáticos. El resultado es irreversible: mineral de alta ley enrutado directamente a botaderos de lastre.",
-    "problem_title": "El Dolor Operacional",
-    "problems": [
-      {
-        "title": "Modelo de bloques degradado",
-        "desc": "La resolución del modelo geológico en zonas de interfase es insuficiente para soportar decisiones de despacho en tiempo real."
-      },
-      {
-        "title": "Dispatch ciego en el frente",
-        "desc": "El sistema de despacho asigna destinos sin clasificación mineralógica in-situ, propagando el error hasta planta."
-      },
-      {
-        "title": "Conciliación Mina-Planta deteriorada",
-        "desc": "La desviación F2 supera rangos operacionales aceptables, comprometiendo la planificación de corto y mediano plazo."
-      },
-      {
-        "title": "Pérdida de cobre fino no cuantificada",
-        "desc": "El mineral mal clasificado que llega a botadero representa una pérdida económica directa y permanente, invisible en los reportes operacionales estándar."
-      }
+  "problem": {
+    "eyebrow": "El Problema",
+    "headline": "En la zona de contacto, el Dispatch decide a ciegas.",
+    "intro": "El modelo de bloques de corto plazo pierde resolución exactamente donde más importa: los contactos litológicos entre óxido, sulfuro y estéril. El operador clasifica visualmente, y cada error envía mineral de alta ley al botadero — de forma irreversible.",
+    "cards": [
+      { "stat": "cm", "title": "Resolución que no alcanza", "desc": "Los bloques de 5–10 m promedian litologías que cambian en centímetros. En el contacto, esa resolución es insuficiente para decidir el destino correcto." },
+      { "stat": "±5%", "title": "F2 fuera de rango", "desc": "La desviación de conciliación Mina-Planta supera los rangos de excelencia operacional, comprometiendo la planificación de corto y mediano plazo." },
+      { "stat": "irrev.", "title": "Pérdida permanente", "desc": "El cobre fino mal clasificado que llega al botadero no se recupera. Es una pérdida directa, continua e invisible en los reportes operacionales estándar." }
     ],
-    "solution_title": "SpectraFlow AI",
-    "solutions": [
-      {
-        "title": "Escáner LIBS Stand-off en pluma",
-        "desc": "Tecnología láser de inducción de plasma de alta resolución montada en la pluma del equipo. Cero contacto, cero abrasión, cero impacto en disponibilidad física."
-      },
-      {
-        "title": "Nodo Edge Computing en cabina",
-        "desc": "Procesamiento embebido de firmas espectrales mediante modelos de Machine Learning propios. Activación bajo demanda al posicionar el balde: sin latencia de red, sin saturación del sistema."
-      },
-      {
-        "title": "Clasificación Óxidos / Sulfuros instantánea",
-        "desc": "Discriminación mineralógica en tiempo real antes de que el material abandone el frente. El Dispatch recibe la señal correcta para cada tronada."
-      },
-      {
-        "title": "Estabilización del KPI F2",
-        "desc": "La conciliación Mina-Planta se estabiliza por debajo del 2%, alineando el modelo de bloques operacional con la realidad del frente de explotación."
-      }
-    ]
+    "honest_note": "Cuánto cuesta este problema depende del yacimiento. No vendemos una cifra genérica: el primer entregable de nuestro trabajo es cuantificarlo con los datos reales de conciliación F2 de su operación."
   },
-  "how": {
-    "eyebrow": "Cómo Funciona",
-    "headline": "La pala como nodo analítico en tiempo real.",
-    "subheadline": "Cuatro pasos que transforman cada balde cargado en una decisión mineralógica informada antes de que el CAEX arranque.",
-    "footnote": "Stand-off: sin contacto con el mineral · Edge ML: sin latencia de nube · Integrado al Dispatch vía API REST/MQTT.",
+  "approach": {
+    "eyebrow": "El Enfoque",
+    "headline": "Medimos química elemental. No inferimos color.",
+    "intro": "La diferencia técnica que define nuestra ventaja: las tecnologías de visión e hiperespectral infieren mineralogía a partir de la reflectancia. LIBS mide la composición elemental real del material — la misma química que determina su ruta metalúrgica.",
     "steps": {
-      "s1": {
-        "tag": "Paso 01",
-        "title": "Pulso Láser Nd:YAG",
-        "desc": "Láser Q-switched >100 mJ disparado en modalidad stand-off a 5–8 m. Cero contacto con el mineral, cero impacto en la disponibilidad de la pala."
-      },
-      "s2": {
-        "tag": "Paso 02",
-        "title": "Plasma & ICCD",
-        "desc": "El pulso crea un micro-plasma en la superficie del mineral. El espectrómetro ICCD gateable captura la firma espectral de Cu, Fe y S en microsegundos."
-      },
-      "s3": {
-        "tag": "Paso 03",
-        "title": "ML Edge · Jetson AGX Orin",
-        "desc": "275 TOPS de potencia IA procesan el espectro con el modelo ML propietario en <500 ms. Sin latencia de nube, sin saturación de red en la mina."
-      },
-      "s4": {
-        "tag": "Paso 04",
-        "title": "Alerta al Dispatch",
-        "desc": "La clasificación mineralógica llega al sistema Wenco Fleet Control vía API antes de que el CAEX inicie su ruta. F2 estabilizado bajo el 2%."
-      }
+      "s1": { "tag": "01 · Excitación", "title": "Pulso láser sobre el material", "desc": "Un pulso láser de alta energía vaporiza una micro-porción del mineral y genera un plasma. La técnica LIBS es estándar y madura para análisis elemental." },
+      "s2": { "tag": "02 · Captura espectral", "title": "Espectrómetro ICCD lee la firma", "desc": "El detector gateable captura las líneas de emisión de Cu, Fe, S y elementos asociados en microsegundos. Cada elemento tiene una firma espectral inequívoca." },
+      "s3": { "tag": "03 · Clasificación ML", "title": "Modelo propietario discrimina especies", "desc": "Nuestro modelo de Machine Learning, entrenado con la librería espectral del yacimiento, clasifica óxido / sulfuro / mixto a partir de la química elemental real." },
+      "s4": { "tag": "04 · Decisión", "title": "Clasificación al flujo de despacho", "desc": "El resultado se entrega al sistema de gestión para informar la decisión de ruteo del material: lixiviación, flotación o estéril." }
+    },
+    "diff_title": "Por qué LIBS y no las alternativas",
+    "diff_intro": "No competimos negando a los demás. Nos posicionamos donde LIBS es técnicamente superior para el problema específico de especiación de cobre.",
+    "comparison": {
+      "header_tech": "Tecnología", "header_measures": "Qué mide", "header_limit": "Limitación para especiación de Cu",
+      "rows": [
+        { "tech": "Hiperespectral (visión)", "measures": "Reflectancia / color", "limit": "Infiere mineralogía; no entrega composición elemental cuantitativa.", "highlight": false },
+        { "tech": "XRF portátil", "measures": "Fluorescencia de rayos X", "limit": "No detecta elementos ligeros (Z<16); discrimina mal especies de Cu.", "highlight": false },
+        { "tech": "SpectraFlow · LIBS", "measures": "Emisión elemental directa", "limit": "Requiere librería espectral por yacimiento (nuestra barrera de entrada).", "highlight": true }
+      ]
     }
   },
-  "tech": {
-    "eyebrow": "Arquitectura Técnica",
-    "headline": "Hardware de grado industrial minero. Software propietario.",
-    "subheadline": "Cada componente especificado al detalle para soportar las condiciones extremas de operación en pala de gran tonelaje.",
-    "g1": { "label": "Sistema Láser", "title": "Fuente de Excitación LIBS" },
-    "g2": { "label": "Detección Espectral", "title": "Espectrómetro ICCD Gateable" },
-    "g3": { "label": "Edge Computing", "title": "Nodo ML Embebido" }
+  "science": {
+    "eyebrow": "Rigor Científico",
+    "headline": "Honestidad técnica como ventaja competitiva.",
+    "intro": "Un evaluador serio confía en quien declara su estado de madurez real. Esto es lo que está probado, lo que estamos validando y lo que es nuestro desafío de ingeniería declarado.",
+    "columns": [
+      { "status": "Probado", "tag": "TRL 8 · Literatura + Lab", "title": "LIBS + ML clasifica minerales", "items": ["Clasificación de minerales por LIBS+ML reporta 82–94% de precisión en condiciones de laboratorio (literatura peer-reviewed).", "La especiación elemental de Cu, Fe y S por espectroscopía de plasma es física establecida.", "Iniciativas como CRC ORE + NRC Canadá validan LIBS para caracterización mineral en minería."] },
+      { "status": "Validando", "tag": "TRL 4 → 5 · En curso", "title": "Precisión en el yacimiento real", "items": ["Construcción de la librería espectral específica del yacimiento objetivo (efecto matriz).", "Modelo ML v0 entrenado sobre muestras reales de zona de contacto.", "Benchmark documentado LIBS vs. hiperespectral vs. XRF sobre las mismas muestras."] },
+      { "status": "Desafío declarado", "tag": "TRL 3 · I+D posterior", "title": "Operación stand-off en pala", "items": ["La medición a 5–8 m en pluma móvil es nuestro desafío de ingeniería de fondo, no una premisa resuelta.", "El MVP valida primero en configuración de proximidad confinada (segura y probada).", "El stand-off se aborda como problema óptico separado, después de validar la química."] }
+    ]
   },
   "metrics": {
-    "eyebrow": "Métricas de Desempeño Validadas",
-    "headline": "Resultados que impactan el balance operacional.",
+    "eyebrow": "Lo que Buscamos Demostrar",
+    "headline": "Métricas objetivo, no promesas.",
+    "intro": "Estas son las metas de validación del piloto. Las presentamos como objetivos a demostrar con evidencia, no como resultados garantizados.",
     "items": [
-      {
-        "value": "< 2%",
-        "label": "Desviación F2",
-        "desc": "Estabilización de la conciliación Mina-Planta dentro de rangos de excelencia operacional."
-      },
-      {
-        "value": "+100K",
-        "label": "Toneladas por Día",
-        "desc": "Capacidad de procesamiento y clasificación mineralógica validada en operaciones de gran escala."
-      },
-      {
-        "value": "> 85%",
-        "label": "Disponibilidad Física",
-        "desc": "Operación stand-off sin contacto con el mineral: el equipo de carguío no modifica su ciclo productivo."
-      }
+      { "value": "≥ 85%", "label": "Precisión objetivo en lab", "desc": "Clasificación óxido/sulfuro sobre muestras reales del yacimiento, validada contra ensayes de referencia." },
+      { "value": "< 2%", "label": "Desviación F2 objetivo", "desc": "Estabilización de la conciliación Mina-Planta como meta de impacto operacional del sistema." },
+      { "value": "Benchmark", "label": "vs. tecnologías existentes", "desc": "Comparativa técnica documentada que demuestre la superioridad de LIBS para especiación de cobre." }
     ]
-  },
-  "financials": {
-    "eyebrow": "Análisis Financiero · Escenario Base",
-    "headline": "El ROI que justifica la decisión esta semana.",
-    "subheadline": "Tres escenarios cuantificados con la misma metodología: 100.000 t/día, 12% en zona de contacto, 0,65% Cu, tasa descuento 8%, precio Cu USD 8.500/t.",
-    "footnote": "* Modelo financiero validado sobre el caso operacional declarado. Cada supuesto se verifica empíricamente durante la Fase 0 del piloto.",
-    "k1": { "label": "VAN 5 años", "sub": "Tasa descuento 8% · Escenario base" },
-    "k2": { "label": "TIR estimada", "sub": "Sobre inversión piloto USD 430K" },
-    "k3": { "label": "Beneficio / Inversión", "sub": "Ratio acumulado 5 años" },
-    "k4": { "label": "Payback piloto", "sub": "Meses desde Fase 1 productiva" },
-    "scenarios": {
-      "title": "Sensibilidad por nivel de reducción de falsos positivos",
-      "fp_reduction": "Reducción FP",
-      "annual": "Ahorro anual",
-      "payback": "Payback",
-      "van": "VAN 5a",
-      "conservative": { "name": "Conservador" },
-      "base":         { "name": "Base", "tag": "KPI Objetivo" },
-      "optimistic":   { "name": "Optimista" }
-    }
-  },
-  "fleet": {
-    "eyebrow": "Economías de Escala",
-    "headline": "Cuánto cuesta instrumentar toda la flota.",
-    "subheadline": "El R&D y el modelo ML se amortizan en el piloto. Cada pala adicional paga solo hardware + instalación + adaptación.",
-    "footnote": "* Escenario base · 50% reducción FP · USD 3M/año por pala · tasa descuento 8% · descuento volumen ~10% en componentes chinos desde módulo 3+.",
-    "cols": {
-      "config": "Configuración",
-      "module": "Módulo adicional",
-      "capex": "CAPEX acumulado",
-      "per_shovel": "Costo prom./pala",
-      "annual": "Ahorro anual",
-      "payback": "Payback"
-    },
-    "rows": {
-      "r1": "1 pala — Piloto",
-      "r2": "3 palas",
-      "r3": "5 palas ★ Punto óptimo",
-      "r4": "8 palas — Flota completa"
-    }
   },
   "roadmap": {
-    "eyebrow": "Hoja de Ruta del Piloto",
-    "headline": "12 meses, dos hitos de decisión, riesgo acotado.",
-    "subheadline": "Estructura stage-gate diseñada para minimizar exposición: si Gate 1 falla, el costo del aprendizaje es USD 150K. Si pasa, el ROI del piloto completo es < 2 meses.",
+    "eyebrow": "Hoja de Ruta · Re-secuenciada",
+    "headline": "Validar barato antes de invertir caro.",
+    "subheadline": "Estructura stage-gate disciplinada. Cada fase tiene un hito de decisión basado en evidencia. Si una fase no cumple su criterio, el proyecto se detiene o pivota antes de comprometer el siguiente bloque de capital.",
     "budget": "Inversión",
-    "p0": {
-      "tag": "Meses 1–4",
-      "title": "Fase 0 — Validación Lab",
-      "desc": "Adquisición de equipos, campaña de muestras de testigos, integración bench y entrenamiento del modelo ML v1 en laboratorio Antofagasta."
-    },
-    "g1": {
-      "tag": "Mes 4",
-      "title": "Gate 1 — Go/No-Go",
-      "desc": "Criterios técnicos: precisión >80% en lab, latencia <500 ms demostrada, ICCD estable >48 h continuas."
-    },
-    "p1": {
-      "tag": "Meses 5–12",
-      "title": "Fase 1 — Piloto en Pala",
-      "desc": "Ruggedización completa, instalación mecánica en pluma, integración con Wenco Dispatch, operación piloto de 6 meses con medición de KPIs reales."
-    },
-    "g2": {
-      "tag": "Mes 12",
-      "title": "Gate 2 — Escala Flota",
-      "desc": "Criterios de negocio: reducción FP >40% demostrada, F2 <2% sostenido por 3 meses, disponibilidad >85% en turno operativo."
-    },
-    "totals": {
-      "label": "Inversión total piloto",
-      "value": "USD 430.000 (Fase 0: USD 150K + Fase 1: USD 280K) · El R&D y el modelo ML se amortizan aquí. Módulos adicionales para escalar a la flota: USD 175K–210K por pala."
-    }
+    "phases": [
+      { "id": "F1", "tag": "Mes 1 · USD 3K", "title": "Descubrimiento de Cliente", "desc": "15+ entrevistas con Superintendentes de Mina y Geólogos en operaciones objetivo. Identificación de sponsors internos y cuantificación de la prioridad del problema.", "gate": "Gate: ≥3 sponsors con interés en POC" },
+      { "id": "F2", "tag": "Mes 2 · USD 10K", "title": "Cuantificación del Problema", "desc": "Análisis de conciliación F2 histórica + muestras reales del frente. Business case con datos del yacimiento específico, no estimaciones genéricas.", "gate": "Gate: problema validado ≥ USD 2M/año" },
+      { "id": "F3", "tag": "Mes 3–4 · USD 40K", "title": "Validación en Laboratorio", "desc": "LIBS de proximidad en laboratorio universitario sobre muestras del yacimiento + modelo ML v0 + benchmark contra hiperespectral y XRF + respaldo de centro académico.", "gate": "Gate: precisión ≥ 85% en laboratorio" },
+      { "id": "F4", "tag": "Mes 5 · USD 15K", "title": "Carta de Intención + Safety", "desc": "HAZOP preliminar del sistema, propuesta de POC con modelo CAPEX-al-cliente y negociación de carta de intención con el sponsor primario.", "gate": "Gate: 1 LOI firmada para POC pagado" }
+    ],
+    "totals": { "label": "Inversión del MVP de validación", "value": "USD 68.000 · 5 meses. Diseñado para producir evidencia técnica defendible, un cliente con carta de intención firmada y un benchmark competitivo — antes de construir el sistema completo." }
   },
-  "haas": {
+  "model": {
     "eyebrow": "Modelo Comercial",
-    "headline": "No vendemos sensores. Vendemos estabilidad de KPIs.",
-    "subheadline": "Nuestro modelo HaaS (Hardware as a Service) elimina la barrera de entrada CAPEX y alinea nuestra rentabilidad exclusivamente con la performance operacional de su faena.",
+    "headline": "Land & Expand: del diagnóstico al sistema.",
+    "subheadline": "No pedimos a la operación una apuesta de capital ciega. Entramos con un servicio de bajo riesgo que entrega valor inmediato y abre la puerta al sistema completo.",
     "cards": [
-      {
-        "tag": "Pilar 01",
-        "title": "Zero CAPEX",
-        "desc": "Todo el hardware OEM industrial de grado minero está incluido en el servicio. Sin inversión inicial, sin depreciación de activos, sin riesgo tecnológico de obsolescencia para la operación.",
-        "highlight": "Hardware incluido en tarifa operativa"
-      },
-      {
-        "tag": "Pilar 02",
-        "title": "Data-as-a-Service",
-        "desc": "Tarifa operativa plana por pala instrumentada, ligada a la clasificación mineralógica en tiempo real y a la disponibilidad garantizada del nodo Edge. Predictibilidad financiera total.",
-        "highlight": "Tarifa plana por pala / mes"
-      },
-      {
-        "tag": "Pilar 03",
-        "title": "Success Fee",
-        "desc": "Bonificación de éxito indexada exclusivamente a la recuperación de cobre fino y al cumplimiento del KPI F2. Si usted no recupera valor, nosotros no cobramos el diferencial.",
-        "highlight": "Alineado al KPI F2 y recuperación Cu"
-      }
+      { "tag": "Entrada · Land", "title": "Diagnóstico Geometalúrgico", "desc": "Cuantificación de la pérdida por misclasificación con datos reales de F2. Servicio de consultoría de bajo costo y alto valor que genera la relación y el business case específico.", "highlight": "Bajo riesgo · Valor inmediato" },
+      { "tag": "Validación · Prove", "title": "POC con CAPEX-al-cliente", "desc": "Prueba de concepto en configuración de proximidad. El cliente adquiere el hardware (su balance lo soporta); Andean Flow aporta el software, el modelo y la integración.", "highlight": "Margen en software, no en hardware" },
+      { "tag": "Escala · Expand", "title": "Licencia + Servicio Recurrente", "desc": "Licencia del software de clasificación + recalibración continua del modelo. El valor recurrente está en el conocimiento geometalúrgico y los datos, no en revender equipos.", "highlight": "Recurrente · Escalable" }
     ]
-  },
-  "traffic": {
-    "eyebrow": "Segundo Producto — En Desarrollo",
-    "headline": "Control Inteligente de Tráfico Minero.",
-    "subheadline": "Sistema de gestión de tráfico en tiempo real para flota completa: predicción de congestión, ruteo óptimo y control de intersecciones con lógica de prioridad de producción.",
-    "f1": { "title": "Visibilidad de tráfico en tiempo real", "desc": "GPS RTK de alta precisión (<2 cm) en todos los equipos + sensores fijos (LiDAR + cámara IA) en intersecciones y rampas críticas. Del estado reactivo al proactivo." },
-    "f2": { "title": "Predicción de congestión con ML", "desc": "Gemelo digital de la red de caminos con modelo ML que anticipa cuellos de botella antes de que ocurran, habilitando ruteo dinámico por ciclo productivo." },
-    "f3": { "title": "Semáforos inteligentes en intersecciones", "desc": "Señalización dinámica y control de derecho de paso integrado al motor de prioridades de producción. Los equipos del ciclo crítico tienen prioridad verificable." },
-    "f4": { "title": "Integración con FMS existente", "desc": "Se integra al Dispatch actual (Wenco, Modular Mining, Cat MineStar) vía API. No reemplaza la infraestructura: la potencia con inteligencia adicional." },
-    "k1": "Tiempos de conducción",
-    "k2": "Congestión en puntos críticos",
-    "k3": "Visibilidad de flota",
-    "k4": "Latencia decisión prioridad"
   },
   "team": {
-    "eyebrow": "Core Team",
-    "headline": "Geología, datos y sistemas. En un solo equipo.",
+    "eyebrow": "Equipo Fundador",
+    "headline": "Geometalurgia, datos y sistemas. La combinación correcta.",
+    "intro": "La ventaja real del proyecto no es el hardware — es el equipo capaz de leer la química, modelarla e integrarla a la operación.",
     "members": [
-      {
-        "name": "Miguel Giuliano",
-        "role": "Founder & Lead Geometallurgist",
-        "bio": "Especialista en geometalurgia aplicada y modelamiento de bloques de corto plazo. Arquitecto del flujo analítico de SpectraFlow AI y responsable de la validación en faena."
-      },
-      {
-        "name": "Cristian Jara",
-        "role": "Lead Data Scientist & Spectral Modeler",
-        "bio": "Desarrollador de los algoritmos propietarios de clasificación espectral en Python. Responsable del entrenamiento, validación y despliegue de modelos ML en el nodo Edge."
-      },
-      {
-        "name": "Giovanni Giuliano",
-        "role": "Lead Systems Integration Engineer",
-        "bio": "Arquitecto de la integración hardware-software en ambiente industrial minero. Responsable del diseño del nodo Edge, la interfaz con el sistema Dispatch y la robustez operacional del sistema."
-      }
-    ]
+      { "name": "Miguel Giuliano", "role": "Founder & Lead Geometallurgist", "bio": "Geometalurgia aplicada y modelamiento de bloques de corto plazo. Define qué clasificar, diseña la librería espectral y valida que la clasificación sea geológicamente correcta." },
+      { "name": "Cristian Jara", "role": "Lead Data Scientist & Spectral Modeler", "bio": "Algoritmos de clasificación espectral en Python. Responsable del entrenamiento, la cuantificación de incertidumbre y el despliegue del modelo en el nodo Edge." },
+      { "name": "Giovanni Giuliano", "role": "Lead Systems Integration Engineer", "bio": "Integración hardware-software en ambiente industrial minero. Responsable del nodo Edge, la interfaz con el sistema de despacho y la robustez operacional." }
+    ],
+    "advisors_note": "En proceso de incorporación: matemático especialista en quimiometría, experto en sistemas Wenco Fleet Control e ingeniero industrial con experiencia en ruteo y ML."
   },
-  "ecosystem": {
-    "eyebrow": "Ecosistema Integral",
-    "headline": "Soluciones end-to-end para la cadena de valor minero-metalúrgica.",
-    "subheadline": "SpectraFlow AI es la punta de lanza de un ecosistema de cuatro unidades de negocio diseñado para resolver los cuellos de botella en cada eslabón del proceso.",
+  "vision": {
+    "eyebrow": "Visión de Largo Plazo",
+    "headline": "SpectraFlow es el primer paso.",
+    "subheadline": "Un ecosistema de soluciones para la cadena de valor minero-metalúrgica, construido sobre la misma base: química, datos y geometalurgia.",
     "units": [
-      {
-        "tag": "Unidad 02",
-        "title": "Mine-to-Mill Reconciliation & Geostatistics",
-        "desc": "Scripts Python propietarios (DHSA) para reconciliación volumétrica, geoestadística aplicada y gestión del error de estimación en el modelo de bloques de largo plazo."
-      },
-      {
-        "tag": "Unidad 03",
-        "title": "Surface Engineering & Robotics — Ablatech",
-        "desc": "Limpieza láser industrial de alta precisión y sistemas de drones para inspección y mantenimiento de activos de superficie. Tecnología de ablación sin abrasivos ni solventes."
-      },
-      {
-        "tag": "Unidad 04",
-        "title": "Chemical & Process Optimization",
-        "desc": "Formulación y suministro de reactivos mineros avanzados para optimización de circuitos de flotación y lixiviación. Enfoque en recuperación metalúrgica y reducción de costos de reagentes."
-      }
+      { "tag": "Activo", "title": "SpectraFlow AI", "desc": "Clasificación mineralógica en el frente de carguío por LIBS + ML. El producto que estamos validando hoy." },
+      { "tag": "En diseño", "title": "Reconciliación Mina-Planta", "desc": "Geoestadística y reconciliación volumétrica para gestión del error de estimación en el modelo de bloques." },
+      { "tag": "Exploratorio", "title": "Control Inteligente de Tráfico", "desc": "Gestión de tráfico minero en tiempo real: predicción de congestión y ruteo óptimo. Segundo producto en evaluación." }
     ]
   },
   "cta": {
-    "aster_badge": "Preparado para revisión · Equipo Aster · BHP",
-    "headline": "¿Listos para eliminar el punto ciego del Dispatch?",
-    "subheadline": "Conversemos sobre cómo SpectraFlow AI puede estabilizar el F2 de su faena e iniciar el piloto antes de Q4 2026.",
-    "primary": "Solicitar Demo Técnica",
-    "secondary": "Descargar Business Case"
+    "aster_badge": "Proyecto postulado · Aster · BHP",
+    "headline": "Conversemos sobre el primer paso.",
+    "subheadline": "Buscamos una operación dispuesta a cuantificar el problema con sus propios datos. Ese diagnóstico es el inicio de bajo riesgo de una colaboración que puede transformar la conciliación de su faena.",
+    "primary": "Agendar Reunión Técnica",
+    "secondary": "Solicitar Dossier del Proyecto"
   },
   "footer": {
-    "tagline": "Inteligencia Mineral. Desde el frente, en tiempo real.",
+    "tagline": "Inteligencia mineralógica. Desde el frente, con rigor científico.",
     "contact_label": "Contacto Comercial y Técnico",
-    "contact_email": "contact@andeanflow.ai",
-    "rights": "© 2025 Andean Flow Technologies SpA. Todos los derechos reservados.",
-    "location": "Santiago, Chile · andeanflow.ai"
+    "contact_email": "miguel@andeanflow.ai",
+    "rights": "© 2026 Andean Flow Technologies SpA. Todos los derechos reservados.",
+    "location": "Santiago, Chile · andeanflow.ai",
+    "disclaimer": "Las cifras de precisión y retorno presentadas son objetivos de validación basados en literatura científica y casos de referencia, no resultados garantizados. La validación empírica es el propósito del programa de pilotaje."
   }
 }
